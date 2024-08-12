@@ -1,0 +1,458 @@
+// *{
+//     background-color: none;
+// }
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    height: 4rem;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.logo {
+    width: 30%;
+}
+
+// .logo img {
+//     width: 11rem;
+//     z-index: 1000;
+// }
+
+.nav-text-white {
+    color: var(--secondary-color);
+    // color: red;
+}
+
+.text-white {
+    color: var(--dark-color) !important;
+}
+
+.navbar-white {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    height: 4rem;
+    color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    background-color: white;
+}
+
+.nav-links {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+}
+
+.nav-links div {
+    font-size: .8Rem;
+    padding: .4rem 1rem;
+    border-radius: .2rem;
+    // border: 1px solid red;
+}
+
+.nav-links div:hover {
+    background-color: rgb(223, 223, 211);
+    cursor: pointer;
+}
+
+.vehicles-container,
+.energy-container,
+.Charging-container,
+.discover-container,
+.Shop-container {
+    display: none;
+}
+
+.vehicles-container-show,
+.energy-container-show,
+.Charging-container-show,
+.discover-container-show,
+.Shop-container-show {
+    background-color: var(--secondary-color);
+    height: auto;
+    position: absolute;
+    top: 51px;
+    z-index: 11;
+    width: 100%;
+    animation: mymove .5s;
+    padding: 0 15%;
+    display: flex;
+    // border: 1px solid yellow;
+}
+
+.discover-container-show {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 30%;
+    gap: 5rem;
+}
+
+.Shop-container-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vehicles-container-show>*,
+.energy-container-show>*,
+.Charging-container-show>*,
+.nav-section-left {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin: 2.2rem 0;
+}
+
+.Shop-container-show>.nav-section-left {
+    width: 76%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 4rem 0;
+}
+
+.Charging-container-show .nav-section-left {
+    width: 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vehicles-container-show .nav-section-right,
+.energy-container-show .nav-section-right,
+.Charging-container-show .nav-section-right {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: .5rem;
+}
+
+.Charging-container-show .nav-section-right {
+    width: 32%;
+}
+
+.discover-container-show .nav-section-right {
+    // border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.2rem;
+    gap: 1.45rem;
+    margin-bottom: 3.6rem;
+    gap: .8rem;
+}
+
+.nav-section-right a {
+    color: var(--black);
+    height: auto;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1rem;
+    margin: 0;
+    width: fit-content;
+    border-bottom: 1px solid var(--white-color);
+    padding-bottom: .2rem;
+}
+
+.nav-section-right a:hover {
+    border-bottom: 1px solid var(--black);
+}
+
+.nav-section-right h4 {
+    color: var(--secondary-dark-color);
+    font-size: .95rem;
+}
+
+.nav-section-card {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    text-align: center;
+    color: var(--black);
+    margin: 1rem 2.05rem;
+}
+
+.nav-section-card h5 {
+    color: var(--black);
+    font-size: .9rem;
+    margin: 0.8rem 0;
+}
+
+.nav-section-card img {
+    height: 6.8rem;
+}
+
+.nav-section-card-action-btn,
+.nav-section-card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-section-card-img:hover {
+    cursor: pointer;
+}
+
+.nav-section-card-action-btn button {
+    border: 0;
+    font-size: 0.75rem;
+    font-weight: 400;
+    background: none;
+    color: var(--secondary-dark-color);
+    margin: -10px 0.5rem;
+    border-bottom: 1px solid var(--secondary-dark-color);
+    line-height: 1.2rem;
+}
+
+.nav-section-card-action-btn button:hover {
+    cursor: pointer;
+    border-bottom: 1px solid var(--black);
+    // margin: 0 .5rem;
+}
+
+.seperator {
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    width: 1px !important;
+    margin: 4rem 3rem 2rem !important;
+}
+
+
+.blurscreen {
+    filter: blur(4px);
+}
+
+.right-nav-link {
+    display: flex;
+    z-index: 1200;
+    width: 30%;
+    justify-content: end;
+}
+
+.right-nav-link div {
+    padding: .5rem;
+    margin: 0 .5rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .4rem;
+}
+
+.right-nav-link div:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes mymove {
+    from {
+        opacity: 0;
+        height: -1000px;
+        color: none;
+        z-index: 10;
+        top: -10000px;
+    }
+
+    to {
+        top: 43px;
+        opacity: 1;
+        z-index: 9;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home-cars {
+    height: 100vh;
+    position: relative;
+}
+
+.home-about-car {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-car-decription {
+    // position: absolute;
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-car-decription h2 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.home-car-decription h4 a {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    border-bottom: 1PX solid;
+}
+
+.home-car-decription P {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.btn {
+    color: white;
+    height: 2.4rem;
+    width: 16.5rem;
+    font-size: 0.85rem;
+    border-radius: 0.4rem;
+    border: 0;
+    font-weight:600;
+}
+
+.order-now {
+    background: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.demo-drive {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+.home-buttons {
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.truck {
+    background: url("./../../../assets/images/backgrounds/Homepage-Cybertruck-Desktop.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+}
+
+
+.home-car-decription img {
+    width: 38rem;
+    margin-top: -3rem;
+}
+
+.truck-order-now {
+    text-transform: uppercase;
+    background: var(--dark-color);
+    color: var(--secondary-dark-color);
+    border-radius: 0;
+    margin-right: 2rem;
+    border-top: 2px solid var(--secondary-dark-color);
+}
+
+.truck-demo-drive {
+    text-transform: uppercase;
+    background-color: var(--dark-color);
+    border-radius: 0;
+    border: 1px solid var(--secondary-dark-color);
+    color: var(--secondary-dark-color);
+}
+
+.home-Solar {
+    height: 100vh;
+    background: url("./../../../assets/images/backgrounds/Homepage-SolarPanels-01-Desktop.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+}
+
+.Solar-roof {
+    height: 100vh;
+    background: url("./../../../assets/images/backgrounds/Homepage-SolarRoof-Desktop-US.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+}
+
+.powerWall {
+    height: 100vh;
+    background: url("./../../../assets/images/backgrounds/Homepage-Powerwall-Desktop-US.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+}
+
+.Accessories {
+    height: 100vh;
+    background: url("./../../../assets/images/backgrounds/Homepage-Accessories-Desktop-US.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+    color: var(--secondary-color);
+}
+
+.footer-section {
+    width: 30%;
+    margin: auto;
+    padding-top: 6rem;
+}
+
+.footer-section p {
+    text-align: center;
+    padding-bottom: .3rem;
+    font-size: 0.7rem;
+}
+
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.2rem 0;
+}
+.footer-links a{
+    color: var(--white-color);
+    font-size: .6rem;
+}

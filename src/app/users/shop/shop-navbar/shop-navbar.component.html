@@ -1,0 +1,227 @@
+<!-- <nav class="navbar">
+    <div class="logo"> -->
+<!-- <img *ngIf="isNavHovered==false" src="../../assets/logos/tesla_logo.png" alt=""> -->
+<!-- <a [routerLink]="['']">
+             <img  src="../../assets/logos/tesla_logo_black.png" alt="">
+         </a>
+    </div>
+</nav> -->
+
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="#">
+            <img src="../../../../assets/images/logos/tesla_logo.png" alt="">
+            <!-- <img *ngIf="isNavHovered==true" src="../../assets/logos/tesla_logo_black.png" alt=""> -->
+        </a>
+    </div>
+    <div class="nav-links">
+        <div (mouseenter)="showVehicleDiv()" (mouseleave)="hideVehicleDiv()" class="nav-text-white">Charging</div>
+        <div (mouseenter)="showEnergyDiv()" (mouseleave)="hideEnergyDiv()" class="nav-text-white">Vehicle Accessories
+        </div>
+        <div (mouseenter)="showChargingDiv()" (mouseleave)="hideChargingDiv()" class="nav-text-white">Apparel</div>
+        <div (mouseenter)="showDiscoverDiv()" (mouseleave)="hideDiscoverDiv()" class="nav-text-white">LifeStyle</div>
+        <!-- <div (mouseenter)="showShopDiv()" (mouseleave)="hideShopDiv()"
+           class="nav-text-white" [routerLink]="['/shop']">Shop</div> -->
+    </div>
+    <div class="right-nav-link">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85zm-5.442 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
+            </svg>
+        </div>
+        <div>
+            <a [routerLink]="['/testroute']">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .49.598l-1.5 8A.5.5 0 0 1 13 14H4a.5.5 0 0 1-.49-.402L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 6l1.25 6.25h8.22l1.25-6.25H3.14zM5.5 12a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zM10.5 12a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1z"/>
+                </svg>
+            </a>
+        </div>
+        <div>
+            <a [routerLink]="['/login']">
+                Menu
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+<div (mouseleave)="hideVehicleDiv()" (mouseenter)="showVehicleDiv()"
+    [className]="isVehicleHovered == true ? 'vehicles-container-show' : 'vehicles-container'">
+    <div class="nav-section-left">
+        <div class="nav-section-card">
+            <h5>CHARGERS </h5>
+        </div>
+        <div class="nav-section-card">
+            <h5>ADAPTERS </h5>
+        </div>
+        <div class="nav-section-card">
+            <h5>PARTS </h5>
+        </div>
+    </div>
+    <div class="seperator"></div>
+    <div class="nav-section-right">
+        <!-- <img src="../../assets/images/WC_transparent.avif" alt=""> -->
+        <img src="../../../../assets/images/images/WC_transparent.avif" alt="">
+        <a href="#roadster"> Wall Connector</a>
+    </div>
+</div>
+
+<div (mouseleave)="hideEnergyDiv()" (mouseenter)="showEnergyDiv()"
+    [className]="isEnergyHovered == true ? 'energy-container-show' : 'energy-container'">
+    <div class="nav-section-left">
+        <div class="nav-section-card">
+            <h5>Cybertruck </h5>
+            <a href="#floor-mats">Floor Mats</a>
+            <a href="#interior">Interior</a>
+            <a href="#exterior">Exterior</a>
+            <a href="#vault">Vault</a>
+            <a href="#wheels-and-tires">Wheels and Tires</a>
+            <a href="#parts">Parts</a>
+            <a href="#keys">Keys</a>
+        </div>
+        <div class="nav-section-card">
+            <h5>model s </h5>
+            <a href="#floor-mats">Floor Mats</a>
+            <a href="#interior">Interior</a>
+            <a href="#exterior">Exterior</a>
+            <a href="#wheels-and-tires">Wheels and Tires</a>
+            <a href="#parts">Parts</a>
+            <a href="#keys">Keys</a>
+        </div>
+        <div class="nav-section-card">
+            <h5>model 3 </h5>
+            <a href="#floor-mats">Floor Mats</a>
+            <a href="#interior">Interior</a>
+            <a href="#exterior">Exterior</a>
+            <a href="#wheels-and-tires">Wheels and Tires</a>
+            <a href="#parts">Parts</a>
+            <a href="#keys">Keys</a>
+        </div>
+        <div class="nav-section-card">
+            <h5>model x </h5>
+            <a href="#floor-mats">Floor Mats</a>
+            <a href="#interior">Interior</a>
+            <a href="#exterior">Exterior</a>
+            <a href="#wheels-and-tires">Wheels and Tires</a>
+            <a href="#parts">Parts</a>
+            <a href="#keys">Keys</a>
+        </div>
+        <div class="nav-section-card">
+            <h5>model y </h5>
+            <a href="#floor-mats">Floor Mats</a>
+            <a href="#interior">Interior</a>
+            <a href="#exterior">Exterior</a>
+            <a href="#wheels-and-tires">Wheels and Tires</a>
+            <a href="#parts">Parts</a>
+            <a href="#keys">Keys</a>
+        </div>
+    </div>
+    <div class="seperator"></div>
+    <div class="nav-section-right">
+        <!-- <img src="../../../assets/images/CyberTentDropdownNav.avif" alt=""> -->
+        <img src="../../../../assets/images/images/CyberTentDropdownNav.avif" alt="">
+
+        <a href="#roadster">Cybertruck CyberTent</a>
+    </div>
+</div>
+
+<div (mouseleave)="hideChargingDiv()" (mouseenter)="showChargingDiv()"
+    [className]="isChargingHovered == true ? 'Charging-container-show' : 'Charging-container'">
+    <div class="nav-section-left">
+        <div class="nav-section-card">
+            <h5>Cybertruck </h5>
+            <a href="#floor-mats">Floor Mats</a>
+            <a href="#interior">Interior</a>
+            <a href="#exterior">Exterior</a>
+            <a href="#vault">Vault</a>
+            <a href="#wheels-and-tires">Wheels and Tires</a>
+            <a href="#parts">Parts</a>
+            <a href="#keys">Keys</a>
+        </div>
+        <div class="nav-section-card">
+            <h5>model s </h5>
+            <a href="#floor-mats">Floor Mats</a>
+            <a href="#interior">Interior</a>
+            <a href="#exterior">Exterior</a>
+            <a href="#wheels-and-tires">Wheels and Tires</a>
+            <a href="#parts">Parts</a>
+            <a href="#keys">Keys</a>
+        </div>
+        <div class="nav-section-card">
+            <h5>model y </h5>
+            <a href="#floor-mats">Floor Mats</a>
+            <a href="#interior">Interior</a>
+            <a href="#exterior">Exterior</a>
+            <a href="#wheels-and-tires">Wheels and Tires</a>
+            <a href="#parts">Parts</a>
+            <a href="#keys">Keys</a>
+        </div>
+    </div>
+    <div class="seperator"></div>
+    <div class="nav-section-right">
+        <img src="../../../../assets/images/images/built_for_any_planet_hoodie_transparent_nav.avif" alt="">
+        <a href="#roadster">Built for Any Planet Hoodie</a>
+    </div>
+</div>
+
+<div (mouseleave)="hideDiscoverDiv()" (mouseenter)="showDiscoverDiv()"
+    [className]="isDiscoverHovered == true ? 'discover-container-show' : 'discover-container'">
+    <div class="nav-section-left">
+        <div class="nav-section-card">
+            <h5>Best Seller </h5>
+            <a href="#exterior">Bags</a>
+        </div>
+        <div class="nav-section-card">
+            <h5>Bags</h5>
+            <a href="#exterior">Leather</a>
+        </div>
+        <div class="nav-section-card">
+            <h5>DrnkWare</h5>
+            <a href="#exterior"></a>
+        </div>
+        <div class="nav-section-card">
+            <h5>mini teslas</h5>
+            <a href="#exterior"></a>
+        </div>
+        <div class="nav-section-card">
+            <h5>outdoor & tech</h5>
+            <a href="#exterior"></a>
+        </div>
+    </div>
+    <div class="seperator"></div>
+    <div class="nav-section-right">
+        <img src="../../../../assets/images/images/M_Gradient-696x482.avif" alt="">
+        <a href="#roadster">Tesla Mezcal</a>
+    </div>
+</div>
+
+<!-- <div (mouseleave)="hideShopDiv()" (mouseenter)="showShopDiv()"
+    [className]="isShopHovered == true ? 'Shop-container-show' : 'Shop-container'">
+    <div class="nav-section-left">
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../assets/images/Mega-Menu-Shop-Charging.avif" alt="">
+            </div>
+            <h5>Charging</h5>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../assets/images/Mega-Menu-Shop-Vehicle-Accessories.avif" alt="">
+            </div>
+            <h5>Vehicle Accessories</h5>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../assets/images/Mega-Menu-Shop-Apparel.avif" alt="">
+            </div>
+            <h5>Apparel</h5>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../assets/images/Mega-Menu-Shop-Lifestyle.avif" alt="">
+            </div>
+            <h5>Lifestyle</h5>
+        </div>
+    </div>
+</div> -->

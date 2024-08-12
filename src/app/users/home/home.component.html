@@ -1,0 +1,432 @@
+<nav [className]="isNavHovered==true?'navbar-white':'navbar' ">
+    <div class="logo">
+        <a href="#">
+            <!-- <img *ngIf="isNavHovered==false" src="../../assets/logos/tesla_logo.png" alt=""> -->
+            <img *ngIf="isNavHovered==false" src="../../../assets/images/logos/logo-white.png" alt="">
+            <img *ngIf="isNavHovered==true" src="../../../assets/images/logos/logo-dark.png" alt="ee">
+        </a>
+    </div>
+    <div class="nav-links">
+        <div (mouseenter)="showVehicleDiv()" (mouseleave)="hideVehicleDiv()"
+            [className]=" isNavHovered == false? 'nav-text-white':'text-white'">Vehicles</div>
+        <div (mouseenter)="showEnergyDiv()" (mouseleave)="hideEnergyDiv()"
+            [className]=" isNavHovered == false? 'nav-text-white':'text-white'">Energy</div>
+        <div (mouseenter)="showChargingDiv()" (mouseleave)="hideChargingDiv()"
+            [className]=" isNavHovered == false? 'nav-text-white':'text-white'">Charging</div>
+        <div (mouseenter)="showDiscoverDiv()" (mouseleave)="hideDiscoverDiv()"
+            [className]=" isNavHovered == false? 'nav-text-white':'text-white'">Discover</div>
+        <div (mouseenter)="showShopDiv()" (mouseleave)="hideShopDiv()"
+            [className]=" isNavHovered == false? 'nav-text-white':'text-white'" [routerLink]="['/shop']">Shop</div>
+    </div>
+    <div class="right-nav-link">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" [attr.fill]="iconColor" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                <path
+                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94" />
+            </svg>
+
+        </div>
+        <div>
+            <a [routerLink]="['/testroute']">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" [attr.fill]="iconColor"
+                    class="bi bi-globe" viewBox="0 0 16 16">
+                    <path
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                </svg>
+            </a>
+        </div>
+        <div>
+            <a [routerLink]="['/login']">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" [attr.fill]="iconColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div (mouseleave)="hideVehicleDiv()" (mouseenter)="showVehicleDiv()"
+    [className]="isVehicleHovered == true ? 'vehicles-container-show' : 'vehicles-container'">
+    <div class="nav-section-left">
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <!-- <img src="../../assets/images/Mega-Menu-Vehicles-Model-S.avif" alt=""> -->
+                <img src="../../../assets/images/images/Mega-Menu-Vehicles-Model-S.avif" alt="">
+            </div>
+            <h5>Model S</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Vehicles-Model-3-Performance-LHD.avif" alt="">
+            </div>
+            <h5>Model 3</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Vehicles-Model-X.avif" alt="">
+            </div>
+            <h5>Model X</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Vehicles-Model-Y.avif" alt="">
+            </div>
+            <h5>Model Y</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Vehicles-Cybertruck-1x.avif" alt="">
+            </div>
+            <h5>Cybertruck</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Vehicles-HMC-RedBlue-LHD.avif" alt="">
+            </div>
+            <h5>Help Me Choose</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Get Started</button>
+            </div>
+        </div>
+    </div>
+    <div class="seperator"></div>
+    <div class="nav-section-right">
+        <a href="#inventory">Inventory</a>
+        <a href="#used-cars">Used Cars</a>
+        <a href="#demo-drive">Demo Drive</a>
+        <a href="#trade-in">Trade-in</a>
+        <a href="#compare">Compare</a>
+        <a href="#help-me-charge">Help Me Charge</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#semi">Semi</a>
+        <a href="#roadster">Roadster</a>
+
+    </div>
+</div>
+
+<div (mouseleave)="hideEnergyDiv()" (mouseenter)="showEnergyDiv()"
+    [className]="isEnergyHovered == true ? 'energy-container-show' : 'energy-container'">
+    <div class="nav-section-left">
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Energy-Solar-Panels.avif" alt="">
+            </div>
+            <h5>Solar Panels</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Energy-Solar-Roof.avif" alt="">
+            </div>
+            <h5>Solar Roof</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Energy-Powerwall-US.avif" alt="">
+            </div>
+            <h5>Powerwall</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Energy-Megapack.avif" alt="">
+            </div>
+            <h5>Megapack</h5>
+            <div class="nav-section-card-action-btn">
+                <button> Learn</button>
+            </div>
+        </div>
+    </div>
+    <div class="seperator"></div>
+    <div class="nav-section-right">
+        <a href="#inventory">Schedule a Consultation</a>
+        <a href="#used-cars">Why Solar</a>
+        <a href="#demo-drive">Incentives</a>
+        <a href="#trade-in">Support</a>
+        <a href="#compare">Partner with Tesla</a>
+        <a href="#help-me-charge">Commercial</a>
+        <a href="#fleet">Utilities</a>
+    </div>
+</div>
+
+<div (mouseleave)="hideChargingDiv()" (mouseenter)="showChargingDiv()"
+    [className]="isChargingHovered == true ? 'Charging-container-show' : 'Charging-container'">
+    <div class="nav-section-left">
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Charging-Charging.avif" alt="">
+            </div>
+            <h5>Solar Panels</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Charging-Home-Charging.avif" alt="">
+            </div>
+            <h5>Solar Roof</h5>
+            <div class="nav-section-card-action-btn">
+                <button>Learn</button>
+                <button>Order</button>
+            </div>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Charging-Supercharging-NA.avif" alt="">
+            </div>
+            <h5>Megapack</h5>
+            <div class="nav-section-card-action-btn">
+                <button> Learn</button>
+            </div>
+        </div>
+    </div>
+    <div class="seperator"></div>
+    <div class="nav-section-right">
+        <a href="your-link-here">Help Me Charge</a>
+        <a href="your-link-here">Charging Calculator</a>
+        <a href="your-link-here">Charging With NACS</a>
+        <a href="your-link-here">Supercharger Voting</a>
+        <a href="your-link-here">Host a Supercharger</a>
+        <a href="your-link-here">Commercial Charging</a>
+        <a href="your-link-here">Host Wall Connectors</a>
+    </div>
+
+
+</div>
+
+<div (mouseleave)="hideDiscoverDiv()" (mouseenter)="showDiscoverDiv()"
+    [className]="isDiscoverHovered == true ? 'discover-container-show' : 'discover-container'">
+    <div class="nav-section-right">
+        <h4>Resources</h4>
+        <a href="your-link-here">Demo Drive</a>
+        <a href="your-link-here">Insurance</a>
+        <a href="your-link-here">Military Purchase Program</a>
+        <a href="your-link-here">Video Guides</a>
+        <a href="your-link-here">Customer Stories</a>
+        <a href="your-link-here">Events</a>
+    </div>
+    <div class="nav-section-right">
+        <h4>Location Services</h4>
+        <a href="your-link-here">Find Us</a>
+        <a href="your-link-here">Find a Collision Center</a>
+        <a href="your-link-here">Find a Certified Installer</a>
+    </div>
+    <div class="nav-section-right">
+        <h4>Company</h4>
+        <a href="your-link-here">About</a>
+        <a href="your-link-here">Careers</a>
+        <a href="your-link-here">Investor Relations</a>
+    </div>
+</div>
+
+<div (mouseleave)="hideShopDiv()" (mouseenter)="showShopDiv()"
+    [className]="isShopHovered == true ? 'Shop-container-show' : 'Shop-container'">
+    <div class="nav-section-left">
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Shop-Charging.avif" alt="">
+            </div>
+            <h5>Charging</h5>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Shop-Vehicle-Accessories.avif" alt="">
+            </div>
+            <h5>Vehicle Accessories</h5>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Shop-Apparel.avif" alt="">
+            </div>
+            <h5>Apparel</h5>
+        </div>
+        <div class="nav-section-card">
+            <div class="nav-section-card-img">
+                <img src="../../../assets/images/images/Mega-Menu-Shop-Lifestyle.avif" alt="">
+            </div>
+            <h5>Lifestyle</h5>
+        </div>
+    </div>
+</div>
+
+
+
+<div [className]="isNavHovered==true? 'blurscreen':''" (mouseenter)="hideAllDivs()">
+    <div *ngFor="let car of homeSection">
+        <section class="home-cars" style="background: url({{car.imageUrl}});     
+background-color: bisque;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-size: cover;">
+            <div class="home-about-car">
+                <div class="home-car-decription">
+                    <h2>{{car.title}}</h2>
+                    <h4><a href="{{car.titleDetailLink}}">{{car.titleDetail}}</a> </h4>
+                    <p>From ${{car.Price}}</p>
+                </div>
+                <div class="home-buttons">
+                    <button class="order-now btn">Order Now</button>
+                    <button class="demo-drive btn">Demo Drive</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="home-cars truck">
+        <div class="home-about-car">
+            <div class="home-car-decription">
+                <h2>
+                    <img src="../../../assets/images/images/cybertrucklogo.svg" alt="">
+                </h2>
+            </div>
+            <div class="home-buttons">
+                <button class="truck-order-now btn">Order Now</button>
+                <button class="truck-demo-drive btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="home-cars home-Solar">
+        <div class="home-about-car">
+            <div class="home-car-decription ">
+                <h2>Solar Panels</h2>
+                <h4><a href="">
+                        Schedule a Virtual Consultation</a> </h4>
+            </div>
+            <div class="home-buttons">
+                <button class="order-now btn">Order Now</button>
+                <button class="demo-drive btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-cars Solar-roof">
+        <div class="home-about-car">
+            <div class="home-car-decription ">
+                <h2>Solar Roof</h2>
+                <h4><a href="">
+                        Produce Clean Energy From Your Roof</a> </h4>
+            </div>
+            <div class="home-buttons">
+                <button class="order-now btn">Order Now</button>
+                <button class="demo-drive btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-cars powerWall">
+        <div class="home-about-car">
+            <div class="home-car-decription ">
+                <h2>Powerwall</h2>
+            </div>
+            <div class="home-buttons">
+                <button class="order-now btn">Order Now</button>
+                <button class="demo-drive btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    .
+    <section class="home-cars Accessories">
+        <div class="home-about-car">
+            <div class="home-car-decription ">
+                <h2>Accessories</h2>
+            </div>
+            <div class="home-buttons">
+                <button class="order-now btn">Order Now</button>
+                <button class="demo-drive btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <p>
+                <sup>1</sup>
+                Price before estimated savings is $46,630, including Destination and Order Fees, but excluding taxes and
+                other fees. Subject to change. Vehicle shown has upgrades that will increase the price. Estimated
+                savings
+                includes $6,000 in gas savings estimated over five years, the $7,500 Federal Tax Credit and state
+                incentives, available to eligible buyers and subject to MSRP caps. Not all vehicles, customers or
+                finance
+                options will be eligible. Terms apply.
+            </p>
+            <p>
+                <sup>2</sup>
+                Price before estimated savings is $81,630, including Destination and Order Fees, but excluding taxes and
+                other fees. Subject to change. Vehicle shown has upgrades that will increase the price. Estimated
+                savings
+                includes $6,500 in gas savings estimated over five years, the $7,500 Federal Tax Credit and state
+                incentives, available to eligible buyers and subject to MSRP caps. Not all vehicles, customers or
+                finance
+                options will be eligible. Terms apply.
+            </p>
+            <p>
+                <sup>3</sup>
+                Price before estimated savings is $81,630, including Destination and Order Fees, but excluding taxes and
+                other fees. Subject to change. Vehicle shown has upgrades that will increase the price. Estimated
+                savings
+                includes $6,500 in gas savings estimated over five years, the $7,500 Federal Tax Credit and state
+                incentives, available to eligible buyers and subject to MSRP caps. Not all vehicles, customers or
+                finance
+                options will be eligible. Terms apply.
+            </p>
+            <p>
+                <sup>4</sup>
+                Price before estimated savings is $76,630, including Destination and Order Fees, but excluding taxes and
+                other fees. Subject to change. Vehicle shown has upgrades that will increase the price. Estimated
+                savings includes $6,500 in gas savings estimated over five years and state incentives, available to
+                eligible buyers and subject to MSRP caps. Not all vehicles, customers or finance options will be
+                eligible. Terms apply.
+            </p>
+            <div class="footer-links">
+                <a href="">Tesla © 2024</a>
+                <a href="">Privacy & Legal</a>
+                <a href="">Vehicle Recalls</a>
+                <a href="">Contact</a>
+                <a href="">News</a>
+                <a href="">Get Updates</a>
+                <a href="">Locations</a>
+            </div>
+        </div>
+    </footer>
+
+</div>

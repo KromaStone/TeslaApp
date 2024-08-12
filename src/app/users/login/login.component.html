@@ -1,0 +1,50 @@
+<app-navbar />
+<div #notificationContainer></div>
+<div class="main-container">
+
+    <div class="login-container">
+        <div class="container">
+
+            <form action="">
+                <h2>Sign In</h2>
+                <p *ngIf="isEmail == true" class="change-email">
+                    <!-- <p > -->
+                    <span>
+                        {{currentEmail}}
+                    </span>
+
+                    <span (click)="changeEmail()" class="change-email">
+                        Change
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        {{toggleEmailPassword}}
+                    </span>
+                </p>
+                <!-- <p>Change</p> -->
+
+                <input *ngIf="isEmail==false" [(ngModel)]="Userlogin.Email" class="login-btn" type="email"
+                    placeholder="Email" name="email" required>
+                <input *ngIf="isEmail==true" [(ngModel)]="Userlogin.Password" class="login-btn" type="text"
+                    placeholder="password" name="password" required>
+                <button *ngIf="isEmail==false" class="login-btn" type="submit" (click)="afterEmail()">Next</button>
+                <button *ngIf="isEmail==true" class="login-btn" type="submit" (click)="login()">submint</button>
+            </form>
+            <p class="trouble-signin">
+                <a href="">Trouble Signing In?</a>
+            </p>
+            <p class="or">
+                <span></span>
+                Or
+                <span></span>
+            </p>
+            <button class="login-btn" type="button" [routerLink]="['/create-account']">Create Account</button>
+
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <app-footer />
+    </div>
+</div>

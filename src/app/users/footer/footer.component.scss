@@ -1,0 +1,24 @@
+.footer{
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    // justify-content: space-around;
+    justify-content: center;
+    // background-color: yellow;
+    // padding: 0 42% ;
+    height: 5rem;
+    font-size: 1.15rem;
+}
+
+.footer-links{
+    // color: var(--black);
+    border-bottom: 1px solid var(--white-color);
+    // border-bottom: 1px solid var(--black);
+    line-height: 1.65rem;
+    color: var(--secondary-dark-color);
+}
+
+.footer-links:hover{
+    border-bottom: 1px solid var(--secondary-dark-color);
+    cursor: pointer;
+}
