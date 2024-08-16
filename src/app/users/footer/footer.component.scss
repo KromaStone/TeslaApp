@@ -1,4 +1,4 @@
-.footer{
+.footer {
     color: var(--black);
     display: flex;
     align-items: center;
@@ -6,11 +6,12 @@
     justify-content: center;
     // background-color: yellow;
     // padding: 0 42% ;
-    height: 5rem;
-    font-size: 1.15rem;
+    height: 1rem;
+    font-size: .8rem;
+    gap: .9rem;
 }
 
-.footer-links{
+.footer-links {
     // color: var(--black);
     border-bottom: 1px solid var(--white-color);
     // border-bottom: 1px solid var(--black);
@@ -18,7 +19,7 @@
     color: var(--secondary-dark-color);
 }
 
-.footer-links:hover{
+.footer-links:hover {
     border-bottom: 1px solid var(--secondary-dark-color);
     cursor: pointer;
 }

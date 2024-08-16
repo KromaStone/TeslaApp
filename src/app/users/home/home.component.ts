@@ -46,7 +46,7 @@ export class HomeComponent {
   iconColor: string;
 
   constructor() {
-    this.iconColor = 'currentColor';
+    this.iconColor = 'white';
   }
 
   isNavHovered: boolean = false;

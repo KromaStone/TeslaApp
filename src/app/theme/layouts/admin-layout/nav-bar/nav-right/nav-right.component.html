@@ -92,7 +92,7 @@
   <li class="dropdown pc-h-item header-user-profile" ngbDropdown>
     <a class="pc-head-link dropdown-toggle arrow-none me-0" ngbDropdownToggle>
       <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="user-avatar me-2" />
-      <span class="f-w-600">John Doe</span>
+      <span class="f-w-600">{{userName}}</span>
     </a>
     <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown" ngbDropdownMenu>
       <div class="dropdown-header">
@@ -125,7 +125,7 @@
             <div>
               <a class="dropdown-item">
                 <i class="text-muted" antIcon theme="outline" type="logout"></i>
-                <span>Logout</span>
+                <span (click)="logout()">Logout</span>
               </a>
             </div>
           </ng-template>

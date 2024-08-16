@@ -13,6 +13,8 @@ import { SalesReportChartComponent } from './sales-report-chart/sales-report-cha
 // icons
 import { IconService } from '@ant-design/icons-angular';
 import { FallOutline, GiftOutline, MessageOutline, RiseOutline, SettingOutline } from '@ant-design/icons-angular/icons';
+import { LoginService } from 'src/app/core/login/login.service';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-default',
@@ -30,9 +32,33 @@ import { FallOutline, GiftOutline, MessageOutline, RiseOutline, SettingOutline }
 })
 export class DefaultComponent {
   // constructor
-  constructor(private iconService: IconService) {
+  constructor(private iconService: IconService ,     private loginservice: LoginService) {
     this.iconService.addIcon(...[RiseOutline, FallOutline, SettingOutline, GiftOutline, MessageOutline]);
   }
+
+
+
+
+  getUsers() {
+    this.loginservice.getUsers().subscribe((response) => {
+      console.log('test', response)
+    },
+      (error) => {
+
+        console.log(error)
+      }
+    )
+  }
+
+
+
+
+
+
+
+
+
+
 
   recentOrder = tableData;
 

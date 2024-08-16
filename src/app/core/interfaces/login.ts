@@ -3,8 +3,8 @@ export class Login {
     Password: string;
     RememberMe: boolean
     constructor(){
-        this.Email = "";
-        this.Password = "";
+        this.Email = "string";
+        this.Password = "string";
         this.RememberMe=true;
     }
 }

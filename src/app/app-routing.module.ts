@@ -5,27 +5,32 @@ import { RouterModule, Routes } from '@angular/router';
 // Project import
 import { AdminComponent } from './theme/layouts/admin-layout/admin-layout.component';
 import { GuestComponent } from './theme/layouts/guest/guest.component';
+import { authenticationGuard } from './demo/authentication/auth/authentication.guard';
+import { HomeComponent } from './users/home/home.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: '/home',
+  //   pathMatch: 'full'
+  // },
   {
     path: '',
-    redirectTo: '/home',
+    component: HomeComponent,
     pathMatch: 'full'
   },
   {
     path: 'home',
     loadComponent: () => import('./users/home/home.component').then((c) => c.HomeComponent)
   },
-  {
-    path: 'login', loadComponent: () => import("./users/login/login.component").then(com => com.LoginComponent)
-  },
+  // {
+  //   path: 'login', loadComponent: () => import("./users/login/login.component").then((com) => com.LoginComponent)
+  // },
   {
     path: 'create-account', loadComponent: () => import("./users/crate-account/crate-account.component").then(com => com.CrateAccountComponent)
   },
   {
-    // path: 'testroute', loadComponent: () => import("./users/test/test.component").then(com => com.TestComponent), canActivate: [authGuard]
-    path: 'testroute', loadComponent: () => import("./users/test/test.component").then(com => com.TestComponent),
-
+    path: 'testroute', loadComponent: () => import("./users/test/test.component").then(com => com.TestComponent), canActivate: [authenticationGuard]
   },
   {
     path: 'shop', loadComponent: () => import("./users/shop/shop-home/shop-home.component").then(com => com.ShopHomeComponent)
@@ -40,9 +45,16 @@ const routes: Routes = [
       //   redirectTo: '/dashboard/default',
       //   pathMatch: 'full'
       // },
+      // {
+      //   path: 'dashboard/default',
+      //   loadComponent: () => import('./demo/default/dashboard/dashboard.component').then((c) => c.DefaultComponent)
+      // },
       {
-        path: 'dashboard/default',
-        loadComponent: () => import('./demo/default/dashboard/dashboard.component').then((c) => c.DefaultComponent)
+        path: 'Admin',
+        loadComponent: () => import('./demo/default/dashboard/dashboard.component').then((c) => c.DefaultComponent), canActivate:[authenticationGuard]
+      },
+      {
+        path: 'products', loadComponent: () => import("./admin/products/products.component").then(com => com.ProductsComponent)
       },
       {
         path: 'typography',
@@ -62,9 +74,12 @@ const routes: Routes = [
     path: '',
     component: GuestComponent,
     children: [
+      // {
+      //   path: 'login', loadComponent: () => import("./users/login/login.component").then(com => com.LoginComponent)
+      // },
       {
         path: 'login',
-        loadComponent: () => import('./demo/authentication/login/login.component')
+        loadComponent: () => import('./demo/authentication/login/login.component').then((c)=>c.LoginComponent)
       },
       {
         path: 'register',

@@ -30,7 +30,7 @@ export const NavigationItems: NavigationItem[] = [
         title: 'Default',
         type: 'item',
         classes: 'nav-item',
-        url: '/dashboard/default',
+        url: '/admin',
         icon: 'dashboard',
         breadcrumbs: false
       }
@@ -79,6 +79,14 @@ export const NavigationItems: NavigationItem[] = [
         icon: 'font-size'
       },
       {
+        id: 'product',
+        title: 'Products',
+        type: 'item',
+        classes: 'nav-item',
+        url: '/products',
+        icon: 'font-size'
+      },
+      {
         id: 'color',
         title: 'Colors',
         type: 'item',
@@ -86,6 +94,7 @@ export const NavigationItems: NavigationItem[] = [
         url: '/color',
         icon: 'bg-colors'
       },
+      
       {
         id: 'tabler',
         title: 'Tabler',

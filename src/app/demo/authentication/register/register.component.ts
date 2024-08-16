@@ -1,11 +1,13 @@
 // angular import
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from 'src/app/users/footer/footer.component';
+import { NavbarComponent } from 'src/app/users/navbar/navbar.component';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule,FooterComponent, NavbarComponent],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
