@@ -288,10 +288,15 @@
 
 <div [className]="isNavHovered==true? 'blurscreen':''" (mouseenter)="hideAllDivs()">
     <div class="video-background">
-        <video autoplay muted loop id="bg-video">
+        <!-- <video autoplay muted loop id="bg-video">
+            <source src="../../../assets/video/Model3_WebsiteHero_Master_D.webm" type="video/webm">
+            Your browser does not support HTML5 video.
+        </video> -->
+        <video autoplay muted loop id="bg-video" onended="this.play()">
             <source src="../../../assets/video/Model3_WebsiteHero_Master_D.webm" type="video/webm">
             Your browser does not support HTML5 video.
         </video>
+        
         <section class="home-cars vid-background" style="background: url();     
 background-color: bisque;
 background-position: center;
