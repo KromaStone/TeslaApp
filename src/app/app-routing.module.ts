@@ -23,11 +23,11 @@ const routes: Routes = [
     path: 'home',
     loadComponent: () => import('./users/home/home.component').then((c) => c.HomeComponent)
   },
-  // {
-  //   path: 'login', loadComponent: () => import("./users/login/login.component").then((com) => com.LoginComponent)
-  // },
   {
     path: 'create-account', loadComponent: () => import("./users/crate-account/crate-account.component").then(com => com.CrateAccountComponent)
+  },
+  {
+    path: 'buy', loadComponent: () => import("./users/buy-component/buy-component.component").then(com => com.BuyComponentComponent)
   },
   {
     path: 'testroute', loadComponent: () => import("./users/test/test.component").then(com => com.TestComponent), canActivate: [authenticationGuard]

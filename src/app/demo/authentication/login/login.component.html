@@ -29,7 +29,7 @@
                 <input *ngIf="isEmail==true" [(ngModel)]="login.Password" class="login-btn" type="text"
                     placeholder="password" name="password" required>
                 <button *ngIf="isEmail==false" class="login-btn" type="button" (click)="afterEmail()">Next</button>
-                <button *ngIf="isEmail==true" class="login-btn" type="submit" (click)="loginClick()">submint</button>
+                <button *ngIf="isEmail==true" class="login-btn" type="submit" (click)="loginClick()">submit</button>
             </form>
             <p class="trouble-signin">
                 <a href="">Trouble Signing In?</a>
@@ -40,7 +40,7 @@
                 <span></span>
             </p>
             <button class="login-btn" type="button" [routerLink]="['/register']">Create Account</button>
-            <button (click)="getUsers()">click</button>
+            <!-- <button (click)="getUsers()">click</button> -->
 
         </div>
     </div>

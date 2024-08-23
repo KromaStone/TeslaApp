@@ -14,24 +14,26 @@ export class LoginService {
   currentUsername
 
 
-  
-  
-  
+
+
+
   CheckUser(login: Login): Observable<any> {
     //Getting api from authService
     var api = this.authService.login(login);
-    let   headers = new HttpHeaders().set("Authorization", `Bearer ${sessionStorage.getItem('token')}`)
-    const response = this.httpclient.post<any>(api, login,{headers});
-    
+    let headers = new HttpHeaders().set("Authorization", `Bearer ${sessionStorage.getItem('token')}`)
+    const response = this.httpclient.post<any>(api, login, { headers });
+
     return response
-    .pipe(
-      map((response) => {
+      .pipe(
+        map((response) => {
           if (response.success == true) {
+            console.log('kartik :  ', response)
             this.currentUsername = response.email;
             // sessionStorage['Response'] = JSON.stringify(response);
             // sessionStorage['user'] = JSON.stringify(response.message);
             sessionStorage.setItem('userName', response.message);
             sessionStorage.setItem('token', response.token);
+            sessionStorage.setItem('refreshToken', response.refreshToken)
           }
           return response;
         }),
@@ -43,7 +45,7 @@ export class LoginService {
   }
 
 
-  getUsers(){
+  getUsers() {
     var api = this.authService.getUser();
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({

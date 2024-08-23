@@ -44,48 +44,53 @@ File: style.css
 
 
 * {
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    transition: all ease-in-out .2s;
-    box-shadow: none;
-    scrollbar-width: auto;
-    scrollbar-color: #e3e3e3 #f7f7f7;
-    border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  transition: all ease-in-out .2s;
+  box-shadow: none;
+  scrollbar-width: auto;
+  scrollbar-color: #e3e3e3 #f7f7f7;
+  border: 0;
 
 }
 
 //   Chrome, Edge, and Safari 
-  *::-webkit-scrollbar {
-    width: 16px;
-  }
+*::-webkit-scrollbar {
+  width: 16px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #f7f7f7;
-  }
+*::-webkit-scrollbar-track {
+  background: #f7f7f7;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #e3e3e3;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #e3e3e3;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
 
 :root {
-    --primary-color: #3E6AE1;
-    --secondary-color: #FFFFFF;
-    --dark-color: #15181E;
-    --secondary-dark-color : #7B7B7C;
-    --black: black;
-    --white-color:#ffffff;
-    --secondary-white: #F4F4F4;
+  --primary-color: #3E6AE1;
+  --secondary-color: #FFFFFF;
+  --dark-color: #15181E;
+  --secondary-dark-color: #7B7B7C;
+  --black: black;
+  --white-color: #ffffff;
+  --secondary-white: #F4F4F4;
 }
 
 
 html {
-    // font-size: 62.5%;
+  // font-size: 62.5%;
+}
+
+
+.f-w-600:hover {
+  cursor: pointer;
 }

@@ -109,9 +109,11 @@ export class LoginComponent {
       (error) => {
         //calling Notification Method
         // this.loginservice.closeModal()
-        this.showNotification('Invalid Password/Username');
+        // this.showNotification('Invalid Password/Username');
+        this.showNotification('Redirecing without Backend');
         this.login.Email = '';
         this.login.Password = '';
+        this.router.navigateByUrl('Admin');
       }
     );
   }
