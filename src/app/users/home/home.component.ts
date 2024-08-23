@@ -13,13 +13,13 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent {
 
   homeSection = [
-    {
-      imageUrl: "./../../../assets/images/backgrounds/Homepage-Model-3-Desktop-US.avif",
-      title: "Model 3",
-      titleDetail: "1.99% APR Financing Ending August 31",
-      titleDetailLink: "#",
-      Price: "34,9901",
-    },
+    // {
+    //   imageUrl: "./../../../assets/images/backgrounds/Homepage-Model-3-Desktop-US.avif",
+    //   title: "Model 3",
+    //   titleDetail: "1.99% APR Financing Ending August 31",
+    //   titleDetailLink: "#",
+    //   Price: "34,9901",
+    // },
     {
       imageUrl: "./../../../assets/images/backgrounds/Homepage-Model-Y-Desktop-US-v2.avif",
       title: "Model Y",

@@ -286,8 +286,41 @@
 </div>
 
 
-
 <div [className]="isNavHovered==true? 'blurscreen':''" (mouseenter)="hideAllDivs()">
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="../../../assets/video/Model3_WebsiteHero_Master_D.webm" type="video/webm">
+            Your browser does not support HTML5 video.
+        </video>
+        <section class="home-cars vid-background" style="background: url();     
+background-color: bisque;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-size: cover;">
+            <div class="home-about-car">
+                <div class="home-car-decription">
+                    <h2>Model 3</h2>
+                    <h4><a href="#">1.99% APR Financing Ending August 31</a> </h4>
+                    <p>From $34,9901</p>
+                </div>
+                <div class="home-buttons">
+                    <button class="order-now btn">Order Now</button>
+                    <button class="demo-drive btn">Demo Drive</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- 
+    {
+        imageUrl: "./../../../assets/images/backgrounds/Homepage-Model-3-Desktop-US.avif",
+        title: "Model 3",
+        titleDetail: "1.99% APR Financing Ending August 31",
+        titleDetailLink: "#",
+        Price: "34,9901",
+      }, -->
+
     <div *ngFor="let car of homeSection">
         <section class="home-cars" style="background: url({{car.imageUrl}});     
 background-color: bisque;
